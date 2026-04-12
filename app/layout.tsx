@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
+import CookieConsent from "./components/CookieConsent";
+import SmoothScroll from "./components/SmoothScroll";
 
 const interTight = Inter_Tight({
   variable: "--font-barlow",
@@ -76,7 +78,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <SmoothScroll>
+          {children}
+          <CookieConsent />
+        </SmoothScroll>
+      </body>
     </html>
   );
 }
