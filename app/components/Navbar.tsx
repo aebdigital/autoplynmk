@@ -15,6 +15,7 @@ export default function Navbar() {
         />
       </Link>
       <div className="hidden md:flex items-center gap-8">
+        <Link href="/" className="text-white font-semibold uppercase text-sm tracking-wider hover:text-[#08a800] transition-colors">Domov</Link>
         <Link href="/#sluzby" className="text-white font-semibold uppercase text-sm tracking-wider hover:text-[#08a800] transition-colors">Služby</Link>
         <Link href="/#o-nas" className="text-white font-semibold uppercase text-sm tracking-wider hover:text-[#08a800] transition-colors">O nás</Link>
         <Link href="/#galeria" className="text-white font-semibold uppercase text-sm tracking-wider hover:text-[#08a800] transition-colors">Galéria</Link>

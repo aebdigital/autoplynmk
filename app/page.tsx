@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import ContactForm from "./components/ContactForm";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -92,10 +93,10 @@ export default function Home() {
 
       {/* ── HERO (sticky, parallax bg) ── */}
       <HeroSection>
-        <div className="px-8 md:px-20 pt-20 max-w-2xl">
+        <div className="px-8 md:px-20 pt-20 max-w-4xl">
           <SectionLabel>Autoservis</SectionLabel>
           <h1
-            className="text-5xl md:text-7xl font-black uppercase italic leading-tight text-white mb-4 max-w-lg"
+            className="text-5xl md:text-7xl font-black uppercase italic leading-tight text-white mb-4 max-w-2xl"
             style={{ fontFamily: "var(--font-barlow)" }}
           >
             LPG servis na ktorý sa dá spoľahnúť
@@ -348,6 +349,30 @@ export default function Home() {
 
       <Footer />
       </div> {/* end slide-over wrapper */}
+
+      {/* Floating Calculator Action Button */}
+      <Link
+        href="/kalkulacka"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#08a800] text-white font-bold uppercase italic px-5 py-3.5 rounded-full shadow-[0_8px_30px_rgba(8,168,0,0.4)] hover:bg-[#15803d] hover:scale-105 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+        style={{ fontFamily: "var(--font-barlow)" }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="w-5 h-5"
+        >
+          <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+          <line x1="8" y1="6" x2="16" y2="6" />
+          <line x1="16" y1="14" x2="16" y2="18" />
+          <path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01" />
+        </svg>
+        <span>Kalkulačka návratnosti</span>
+      </Link>
     </div>
   );
 }

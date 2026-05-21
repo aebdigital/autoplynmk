@@ -30,7 +30,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="text-gray-400 text-sm space-y-2">
-          <Link href="/ochrana-osobnych-udajov" className="block hover:text-white transition-colors">
+          <Link href="/ochrana-osobnych-udajov" className="block hover:text-white transition-colors" prefetch={false}>
             Ochrana osobných údajov
           </Link>
           <button
